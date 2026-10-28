@@ -43,7 +43,7 @@ Software Engineer na **Vector FIDC**, responsável pela plataforma interna de op
 ### Tecnologias
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,redis,docker,nginx,githubactions,linux,git,react,nextjs,ts,js,vite,tailwind,nodejs,vscode&perline=9" alt="Tecnologias" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,java,spring,postgres,redis,docker,nginx,githubactions,linux,git,react,nextjs,ts,js,vite,tailwind,nodejs,vscode&perline=10" alt="Tecnologias" />
 </p>
 
 <p align="center">

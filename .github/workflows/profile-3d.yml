@@ -14,7 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+      # A ferramenta não tem opção para ocultar linguagens: baixa a v0.9.3 e tira
+      # Shell e PowerShell do gráfico de linguagens (os commits entram em "other").
+      - uses: actions/checkout@v4
+        with:
+          repository: yoshi389111/github-profile-3d-contrib
+          ref: v0.9.3
+          path: .profile-3d-contrib-action
+      - name: Oculta Shell e PowerShell
+        run: |
+          sed -i "s/\.filter((repo) => repo\.repository\.primaryLanguage)/.filter((repo) => repo.repository.primaryLanguage \&\& !['Shell', 'PowerShell'].includes(repo.repository.primaryLanguage.name))/" .profile-3d-contrib-action/dist/index.js
+          grep -q "'Shell', 'PowerShell'" .profile-3d-contrib-action/dist/index.js
+      - uses: ./.profile-3d-contrib-action
         env:
           # Token pessoal (repo + read:user) para incluir os repositórios privados
           GITHUB_TOKEN: ${{ secrets.PROFILE_3D_TOKEN || secrets.GITHUB_TOKEN }}
