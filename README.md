@@ -34,7 +34,7 @@ APIs bem modeladas, integração entre sistemas legados e produtos de dados para
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-gitblue.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-gitblock.svg" />
   <img src="./profile-3d-contrib/profile-night-view.svg" alt="Calendário 3D de contribuições" />
 </picture>
 
